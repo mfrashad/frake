@@ -8,22 +8,13 @@
 		<input class="form-control" id="classNo" placeholder="0-999" required="" type="email">
   </div>
   <label><strong>Please label the first 5 images you uploaded </strong></label> 
-  <div class="form-group">
-    <label for="imageLabel1">What is in image 1?</label> 
-		<input class="form-control" id="imageLabel1" placeholder="Eg. Dog, Cat" required="" type="email">
-  </div>
-  <div class="form-group">
-    <label for="imageLabel2">What is in image 2?</label> 
-		<input class="form-control" id="imageLabel2" placeholder="Eg. Dog, Cat" required="" type="email">
-  </div>
-  <div class="form-group">
-    <label for="imageLabel3">What is in image 3?</label> 
-		<input class="form-control" id="imageLabel3" placeholder="Eg. Dog, Cat" required="" type="email">
-  </div>
-  <div class="form-group">
-    <label for="imageLabel4">What is in image 4?</label> 
-		<input class="form-control" id="imageLabel4" placeholder="Eg. Dog, Cat" required="" type="email">
-  </div>
+  <% for i in 0...5 do %>
+    <div class="form-group">
+      <label for="imageLabel1">What is in image <%= i + 1 %> ?</label> 
+	  	<input class="form-control" id="imageLabel[<%= i %>]" placeholder="Eg. Dog, Cat" required="" type="email">
+    </div>
+  <% end %>
+
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <label class="input-group-text" for="inputGroupSelect01">Save or Deploy?</label>
@@ -33,7 +24,7 @@
       <option value="deploy">Deploy</option>
     </select>
   </div>
-  <div class="form-group">
-    <button class="btn btn-success btn-lg float-right" type="submit">SUBMIT</button>
+  <div class="form-group text-center">
+    <button class="btn btn-success btn-lg" type="submit">SUBMIT</button>
   </div>
 </form>
