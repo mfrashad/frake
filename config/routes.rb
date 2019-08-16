@@ -6,6 +6,5 @@ Rails.application.routes.draw do
     end
   end
   get '/home', to: 'pages#home'
-  get '/:static_page', to: 'pages#show'
 
 end

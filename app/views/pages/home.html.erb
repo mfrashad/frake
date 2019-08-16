@@ -73,13 +73,20 @@
         overflow-y: hidden;
         z-index: -1;
     }
+    button {
+        border: none;
+    }
+
+    button:focus {
+        outline: none;
+    }
 
 </style>
 
 <section id="header">
     <div class="container-fluid">
         <div class="row text-center">
-            <%= video_tag(["vid.mp4"], :autoplay => true, :loop => true, :id => "myVideo") %>
+            <%= video_tag("vid.mp4", :autoplay => true, :loop => true, :id => "myVideo") %>
             <div class="headertext-holder">
                 <h1 class="demi col wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">Introducing Zed.ai</h1>
                 <h1 class="ilight col lead wow fadeInUp display-4" data-wow-duration="1s" data-wow-delay="0.5s">AI against Climate Change.</h1>
@@ -157,15 +164,17 @@
         <div class="row">
             <div class="col-12">
                 <h1 class="demi">Wildlife Conservation</h1>
-                
             </div>
         </div>
         
         <div class="row" align="center">
-            <div class="col-md box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+            <!-- <button class="" data-wow-duration="1s" data-wow-delay="0.2s"> -->
+            <%= link_to datum_index_path, :style => "text-decoration: none", class: "col-md box wow fadeInUp" do %>
+                
                 <h2 class="demi text-white">Intruder<br>Detector</h2>
                 <p class="text-white light">A robust multi-target intruder detector for conservation security.</p>
-            </div>
+            <% end %>
+            <!-- </button> -->
             <div class="col-md box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                 <h2 class="demi text-white">Land Usage<br>Monitor</h2>
                 <p class="text-white light">A toolkit that segments aerial images to monitor land coverage and conditions over time.</p>
@@ -211,7 +220,6 @@
             </div>
             
         </div>
-        
         
     </div>
 
