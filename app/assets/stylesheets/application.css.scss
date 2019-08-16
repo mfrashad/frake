@@ -13,3 +13,59 @@
  *= require_tree .
  *= require_self
  */
+
+ @font-face {
+    src: url('/assets/demi');
+    font-family: "Demi";
+}
+
+@font-face {
+    src: url('/assets/idemi');
+    font-family: "Idemi";
+}
+
+@font-face {
+    src: url('light');
+    font-family: "Light";
+}
+
+@font-face {
+    src: url('/assets/ilight');
+    font-family: "Ilight";
+}
+
+@font-face {
+    src: url('/assets/bold');
+    font-family: "Bold";
+}
+
+.bold {
+    font-family: "Bold";
+}
+
+.demi {
+    font-family: "Demi";
+}
+
+.idemi {
+    font-family: "IDemi"
+}
+
+.light {
+    font-family: "Light";
+}
+
+.ilight {
+    font-family: "Ilight";
+}
+
+nav {
+    background-color: rgba(0,0,0,0.25);
+    z-index: 99;
+}
+
+nav li a {
+    font-family: "Demi";
+    margin: 0px 8px;
+    font-size: 14px;
+}
