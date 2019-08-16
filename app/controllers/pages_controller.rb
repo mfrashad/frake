@@ -3,5 +3,8 @@ class PagesController < ApplicationController
       render params[:static_page]
     end
 
+    def home 
+    end
+
   end
   

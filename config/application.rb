@@ -18,5 +18,7 @@ module AbcdeSnap
 
     config.assets.enabled = true
     config.assets.paths << Rails.root.join('/app/assets/fonts')
+    config.assets.paths << Rails.root,join('/app/assets/media')
+
   end
 end

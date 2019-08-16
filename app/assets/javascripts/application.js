@@ -16,3 +16,8 @@
 //= require bootstrap-sprockets
 //= require dropzone
 //= require_tree .
+
+
+$ (function () {
+	new WOW().init();
+});

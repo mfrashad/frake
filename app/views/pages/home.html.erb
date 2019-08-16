@@ -1,0 +1,248 @@
+<style type="text/css">
+    #header {
+        height: 100vh;
+    /*    background-image: url("https://www.markgray.com.au/images/gallery/large/wanaka-tree.jpg");*/
+        background-size: cover;
+        position: relative;
+    /*    background-image: linear-gradient(to right, #333, black);*/
+    }
+
+    .headertext-holder {
+        width: 100%;
+        display: block;
+        padding: 50px 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    /*    background-color: rgba(0,0,0,0.7);*/
+        
+    }
+
+    .headertext-holder * {
+    /*    text-shadow: 0 3px 6px rgba(0,0,0,0.2);*/
+        color: white;
+    }
+
+
+    .box {
+        cursor: pointer;
+        margin: 20px;
+        border-radius: 20px;
+        padding: 40px 30px 30px 30px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.16);
+        transition: 0.3s;
+    }
+
+    .box:hover {
+        box-shadow: 0 7px 15px rgba(0,0,0,0.3);
+        transform: scale(1.05);
+    }
+
+    #marine .box {
+        background-image: linear-gradient(45deg, #1cefff, dodgerblue);
+    }
+
+    #agri .box {
+        background-image: linear-gradient(45deg, #f7971e, #ffd200);
+    }
+
+    #wildlife .box {
+        background-image: linear-gradient(45deg, #24fe41, #45b649);
+    }
+
+    #recycle .box {
+        background-image: linear-gradient(to right, #ffdde1, #ee9ca7);
+    }
+
+    #home .box {
+        background-image: linear-gradient(45deg, #56ccf2, #2f80ed);
+    }
+
+    #energy .box {
+        background-image: linear-gradient(45deg, #ff4b1f, #f11712);
+    }
+
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        overflow-y: hidden;
+        z-index: -1;
+    }
+
+</style>
+
+<section id="header">
+    <div class="container-fluid">
+        <div class="row text-center">
+            <%= video_tag(["vid.mp4"], :autoplay => true, :loop => true, :id => "myVideo") %>
+            <div class="headertext-holder">
+                <h1 class="demi col wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">Introducing Zed.ai</h1>
+                <h1 class="ilight col lead wow fadeInUp display-4" data-wow-duration="1s" data-wow-delay="0.5s">AI against Climate Change.</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-4 bg-white" id="marine">
+    <div class="container pt-4">
+        <div class="row pt-4">
+            <div class="col-12">
+                <h1 class="demi">Marine and Aquatics</h1>
+                <p class="light lead">The underwater world accounts for a significant segment of our ecosystem and it accounts for 72 per cent of the earth's surface. Her conservation thus lies at the very heart of the well-being for earth and all its inhabitants.</p>
+            </div>
+        </div>
+        
+        <div class="row" align="center">
+            <div class="col-md box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                <h2 class="demi text-white">Population <br>Estimator</h2>
+                <p class="text-white light">A toolkit that helps predicts the ever evolving population of aquatic lifeforms.</p>
+            </div>
+            <div class="col-md box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                <h2 class="demi text-white">Coral Reef<br>Monitor</h2>
+                <p class="text-white light">A model to help monitor and assess the condition of coral reefs through images.</p>
+            </div>
+            <div class="col-md box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                <h2 class="demi text-white">Species<br> Classifier</h2>
+                <p class="text-white light">A model that helps identify a wide variety of aquatic lifeforms from given images.</p>
+            </div>
+            
+            <div class="col-md box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <h2 class="demi text-white">Species<br>Counter</h2>
+                <p class="text-white light">A robust tool to keep count of the inhabitants in a local habitat through visual aids. </p>
+            </div>
+        </div>
+        
+    </div>
+
+</section>
+<section class="py-4 bg-white" id="agri">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="demi">Agriculture</h1>
+            </div>
+        </div>
+        
+        <div class="row" align="center">
+            <div class="col-md box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                <h2 class="demi text-white">Weed <br>Detection</h2>
+                <p class="text-white light">A model that helps identifying stray weed on a farm.</p>
+            </div>
+            <div class="col-md box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                <h2 class="demi text-white">Crop<br> Classifier</h2>
+                <p class="text-white light">A model that helps identify a wide variety of plants from given images.</p>
+            </div>
+            
+            <div class="col-md box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                <h2 class="demi text-white">Crop<br>Counter</h2>
+                <p class="text-white light">A robust tool to keep count of the inhabitants in a local habitat through visual aids.</p>
+            </div>
+            
+            <div class="col-md box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <h2 class="demi text-white">Health<br>Monitor</h2>
+                <p class="text-white light">A toolkit for identifying unhealthy crops on the farm at scale. </p>
+            </div>
+        </div>
+        
+    </div>
+
+</section>
+<section class="py-4 bg-white" id="wildlife">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="demi">Wildlife Conservation</h1>
+                
+            </div>
+        </div>
+        
+        <div class="row" align="center">
+            <div class="col-md box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                <h2 class="demi text-white">Intruder<br>Detector</h2>
+                <p class="text-white light">A robust multi-target intruder detector for conservation security.</p>
+            </div>
+            <div class="col-md box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                <h2 class="demi text-white">Land Usage<br>Monitor</h2>
+                <p class="text-white light">A toolkit that segments aerial images to monitor land coverage and conditions over time.</p>
+            </div>
+            
+            <div class="col-md box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                <h2 class="demi text-white">Population<br>Tracker</h2>
+                <p class="text-white light">A toolkit to help keep track of the ever evolving animal population in a habitat.</p>
+            </div>
+            
+            <div class="col-md box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <h2 class="demi text-white">Species<br>Classifier</h2>
+                <p class="text-white light">A model that helps identify a wide variety of  terresterial lifeforms from given images.</p>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+
+</section>       
+<section class="py-4 bg-white" id="energy">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="demi">Resource Management</h1>
+            </div>
+        </div>
+        
+        <div class="row" align="center">
+            <div class="col-md-3 box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                <h2 class="demi text-white">Expenditure Predictor</h2>
+<!--                        <p class="text-white light">So baby pull me closer in the backseat of your Rover, that I know you can't afford</p>-->
+            </div>
+            <div class="col-md-3 box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                <h2 class="demi text-white">Carbon Footprint Estimator</h2>
+<!--                        <p class="text-white light">So baby pull me closer in the backseat of your Rover, that I know you can't afford</p>-->
+            </div>
+            
+            <div class="col-md-3 box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                <h2 class="demi text-white">Personalise Usage</h2>
+<!--                        <p class="text-white light">So baby pull me closer in the backseat of your Rover, that I know you can't afford</p>-->
+            </div>
+            
+        </div>
+        
+        
+    </div>
+
+</section>
+<section class="py-4 bg-white" id="recycle">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="demi">Recycling</h1>
+            </div>
+        </div>
+        
+        <div class="row" align="center">
+            <div class="col-md-3 box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                <h2 class="demi text-white">Trash Type Classifier</h2>
+<!--                        <p class="text-white light">So baby pull me closer in the backseat of your Rover, that I know you can't afford</p>-->
+            </div>
+            
+        </div>
+        
+        
+    </div>
+
+</section>
+<footer class="py-4 bg-light">
+    <div class="container">
+        <p class="light text-center">2019 &copy; <span class="demi">Humans of Earth</span>.</p>
+    </div>
+</footer>
+
+
+
+<!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
