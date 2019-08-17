@@ -4,5 +4,8 @@ class PagesController < ApplicationController
 
     def output
     end
+
+    def final
+    end
   end
   

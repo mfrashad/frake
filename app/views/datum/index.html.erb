@@ -5,6 +5,7 @@
       background: white;
       width: 120px;
       color: black;
+      position: relative;
       cursor: pointer;
       text-align: center;
       text-decoration: none;
@@ -13,6 +14,9 @@
       outline: none;
       padding: 8px;
       transition: 0.3s;
+      text-decoration: none;
+        border: 1px solid black;
+        outline: none;
     }
     .submit-btn:hover {
         background-color: black;
@@ -91,13 +95,13 @@
 
 <section id="indet" class="py-4 my-4">
     <div class="container">
-        <div>
-            <h3 class="demi text-dark">Upload footages</h3>
+        <div class="row">
+            <h3 class="demi text-dark col-12">Upload footages</h3>
             <%= render 'upload' %>
         </div>
     
         <button type="button" class='btn-auth light align-middle'>Authenticate</button>
-        <a href="#"><button type="submit" class="submit-btn light align-middle" disabled="true" id="uploader-submit">Submit</button></a>
+        <%= link_to "Submit", output_path, class: "submit-btn light align-middle", disabled: true, :id => "uploader-submit", style: "text-decoration: none" %>
 
     </div>
 </section>
