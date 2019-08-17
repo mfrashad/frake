@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'visitors#index'
+  root to: 'datum#index'
   resources :datum do
     collection do 
       get :data
