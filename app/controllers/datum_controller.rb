@@ -17,11 +17,17 @@ class DatumController < ApplicationController
     @rows = csv.take(10)
   end
 
+  def select
+    @classes = File.readlines('public/outputs/classes.txt')  
+    respond_to do |format|
+      format.html
+      format.json{ render :json => @classes }
+    end
+  end
+
   def data
-    csv_text = File.read('public/uploads/datum/cleaner.csv')
-    csv = CSV.parse(csv_text, :headers => true)
-    @headers = csv.headers
-    @rows = csv.take(10)
+    @data = File.read('public/outputs/all/person_full.csv').split(",").map(&:strip)
+    @count = @data.uniq.length   
     respond_to do |format|
       format.html
       format.json{ render :json => @data }

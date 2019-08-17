@@ -3,11 +3,13 @@
   <div class="content">
     <div class="container-fluid">
       <h2> Output </h2>
+      <% @classes.each do |c|%>
         <div class="row">
           <div class="col-xl-12 col-lg-12 center">
-            <p><%= @count %></p>
+            <p><%= c %></p>
           </div>
         </div>
+      <% end %>
     </div>
   </div>
 </div>

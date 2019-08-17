@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :datum do
     collection do 
       get :data
+      get :select
     end
   end
   get '/home', to: 'pages#home'

@@ -1,0 +1,16 @@
+backpack
+bottle
+cellphone
+chair
+cup
+diningtable
+donut
+fork
+handbag
+keyboard
+laptop
+mouse
+person
+sofa
+spoon
+suitcase
