@@ -22,7 +22,10 @@ class DatumController < ApplicationController
     csv = CSV.parse(csv_text, :headers => true)
     @headers = csv.headers
     @rows = csv.take(10)
-    render :json => @rows
+    respond_to do |format|
+      format.html
+      format.json{ render :json => @data }
+    end
   end
 end
   
