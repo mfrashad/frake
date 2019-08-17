@@ -35,14 +35,13 @@
   
 
 
-<%#= render 'layouts/wildlife_head' %>
-<br><br>
+<%= render 'layouts/wildlife_head' %>
 <section id="results" class="py-4 my-4">
     <div class="container">
         <div class="row mb-4">
-            <h3 class="col-12 demi text-dark py-2">Results</h3>
-            <img src="https://azati.com/wp-content/uploads/2019/02/object-detection-800x400.jpg" class="col-md-6 mx-0">
-            <img src="https://azati.com/wp-content/uploads/2019/02/object-detection-800x400.jpg" class="col-md-5 mx-0">
+            <h3 class="col-12 demi text-dark py-2 box wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.05s">Results</h3>
+            <img src="https://azati.com/wp-content/uploads/2019/02/object-detection-800x400.jpg" class="col-md-6 mx-0 box wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.1s">
+            <img src="https://azati.com/wp-content/uploads/2019/02/object-detection-800x400.jpg" class="col-md-5 mx-0 box wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.15s">
         </div>
         <div class="row py-1">
         	<h5 class="lead light col-3">Confidence Score : </h5>
@@ -54,14 +53,15 @@
         <div class="row py-1">
         	<h5 class="lead light col-3">Number of Detections : </h5>
         	<h5 class="col-6 text-danger px-0 demi">37</h5>
+        </div>
 
+        <div class="row py-2 mx-0">
+        	<button class="lead light btn btn-dark mr-2 box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">Download</button>
+        	<button class="lead light btn btn-outline-primary box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">Save</button>
         </div>
         
     </div>
 </section>
-
-
-
 
 <script>
 
@@ -80,4 +80,7 @@
 	    // });
 	});
 </script>
+
+<!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 
