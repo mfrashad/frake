@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .margin {
-  margin: 20px 40px;
+  margin: 80px 60px 0 60px;
 }
 
 .form {
@@ -63,6 +63,6 @@ input.invalid {
 
 @media (min-width: 768px) { 
   .margin {
-    margin: 20px 400px;
+    margin: 80px 400px 0 400px;
   }
 }
