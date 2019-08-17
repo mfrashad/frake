@@ -3,7 +3,7 @@ Zed.ai
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-Introducing Zed.ai
+Introducing Zed.ai (formerly frake)
 AI against Climate Change.
 
 Zed.ai is a platfrom to enable everyone use powerful AI tools against climate change without deep knowledge regarding AI or ML.
