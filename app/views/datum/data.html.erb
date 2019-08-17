@@ -1,13 +1,83 @@
-<h1>Output</h1>
-<div class="margin">
-  <div class="content">
-    <div class="container-fluid">
-      <h2> Output </h2>
-        <div class="row">
-          <div class="col-xl-12 col-lg-12 center">
-            <p><%= @count %></p>
-          </div>
+<style type="text/css">
+	.list-group-item {
+	    background: #f5f5f5;
+	    position: relative;
+	    display: inline;
+	    padding: 10px 15px;
+	    border: 1px solid #e7e7e7;
+	    cursor:pointer;
+	    border-radius: 5px;
+	    margin-right: 10px;
+	    line-height: 20px;
+	    text-align: center
+	}
+
+	.submit-btn {
+        margin: 10px 0;
+      background: black;
+      width: 120px;
+      color: white;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 3px;
+      border: 1px solid black;
+      outline: none;
+      padding: 8px;
+      transition: 0.3s;
+    }
+
+	.list-group-item.active a {
+	    color: white;
+	}
+</style>
+
+  
+
+
+<%#= render 'layouts/wildlife_head' %>
+<br><br>
+<section id="results" class="py-4 my-4">
+    <div class="container">
+        <div class="row mb-4">
+            <h3 class="col-12 demi text-dark py-2">Results</h3>
+            <img src="/uploads/datum/1.png" class="col-md-6 mx-0">
+            <img src="/uploads/datum/40.png" class="col-md-6 mx-0">
         </div>
+        <div class="row py-1">
+        	<h5 class="lead light col-3">Confidence Score : </h5>
+			<div class="progress col-6 px-0 align-middle" style="height: 25px">
+				<div class="light lead progress-bar bg-success" style="width:90.7%">90.7%</div>
+			</div>
+        </div>
+        
+        <div class="row py-1">
+        	<h5 class="lead light col-3">Number of Detections : </h5>
+        	<h5 class="col-6 text-danger px-0 demi"><%= @count %> </h5>
+
+        </div>
+        
     </div>
-  </div>
-</div>
+</section>
+
+
+
+
+<script>
+
+	$(function () {
+	    // var $lists = $('.list-group li').click(function(e) {
+
+	    $("ul li").click(function () {
+	        $(this).toggleClass("active");
+	        e.preventDefault(); /*ignores actual link*/
+	    });
+
+
+	    // $lists.filter(".active").removeClass("active");
+	    // $(this).addClass('active');
+	    // e.preventDefault() /*ignores actual link*/
+	    // });
+	});
+</script>
+

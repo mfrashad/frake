@@ -1,5 +1,7 @@
 backpack
+person
 bottle
+laptop
 cellphone
 chair
 cup
@@ -8,9 +10,7 @@ donut
 fork
 handbag
 keyboard
-laptop
 mouse
-person
 sofa
 spoon
 suitcase

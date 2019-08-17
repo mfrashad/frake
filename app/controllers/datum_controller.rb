@@ -27,7 +27,8 @@ class DatumController < ApplicationController
 
   def data
     @data = File.read('public/outputs/all/person_full.csv').split(",").map(&:strip)
-    @count = @data.uniq.length   
+    @count = @data.uniq.length
+    @sample = [rand(1..@count/8), rand(@count/8..@count/4)]
     respond_to do |format|
       format.html
       format.json{ render :json => @data }
