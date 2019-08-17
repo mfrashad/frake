@@ -1,4 +1,4 @@
-<form autocomplete="off" class="form" role="form" id="input-form" >
+<form autocomplete="off" class="form" action="#" method="get" role="form" id="input-form" >
     <div class="tab">
       <h2>Step 1</h2>
       <div class="form-group">
@@ -8,6 +8,7 @@
     </div>
     <div class="tab">
       <h2>Step 2</h2>
+        <%= image_tag("classNo.jpg") %>
         <div class="form-group">
           <label for="classNo">How many types of thing do you have?</label> 
 	      	<input class="form-control" id="classNo" placeholder="0-999" required="" type="email">
@@ -15,6 +16,7 @@
     </div>
     <div class="tab">
       <h3> Step 3 </h3>
+      <%= image_tag("label.jpg") %>
       <label><strong>Please label the first 5 images you uploaded </strong></label> 
       <% for i in 0...5 do %>
         <div class="form-group">
@@ -84,7 +86,7 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    document.getElementById("input-hard").submit();
+    document.getElementById("input-form").submit();
     return false;
   }
   // Otherwise, display the correct tab:
