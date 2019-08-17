@@ -1,0 +1,65 @@
+<style type="text/css">
+	.active {
+		color: white;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.bruh {
+		color: black;
+	}
+</style>
+
+<%= render 'layouts/wildlife_head' %>
+
+<section id="results" class="py-4 my-4">
+    <div class="container">
+        <div class="row">
+            <h3 class="col-12 demi text-dark">Results</h3>
+            <div class="col-12">
+            	
+            	
+    
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<ul class="list-group">
+    <li class="list-group-item"><a href="/center.html"></a>
+    </li>
+    <li class="list-group-item"><a href="/staff.html"></a>
+    </li>
+    <li class="list-group-item"><a href="/agreement.html"></a>
+    </li>
+    <li class="list-group-item"><a href="/news-and-events.html">News &amp; Events</a>
+    </li>
+    <li class="list-group-item"><a href="/activities.html">Activities</a>
+    </li>
+    <li class="list-group-item"><a href="/contacts.html">Contacts</a>
+    </li>
+</ul>
+
+
+<script>
+
+	$(function () {
+	    //var $lists = $('.list-group li').click(function(e) {
+
+	    $(".list-group li").click(function () {
+	        $(this).toggleClass("active");
+	        e.preventDefault(); /*ignores actual link*/
+	        $("a").addClass('bruh');
+	    });
+
+
+	    //$lists.filter(".active").removeClass("active");
+	    //$(this).addClass('active');
+	    //e.preventDefault() /*ignores actual link*/
+	    //});
+	});
+</script>

@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     end
   end
   get '/home', to: 'pages#home'
+  get '/output', to: 'pages#output'
 
 end

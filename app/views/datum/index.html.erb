@@ -1,19 +1,154 @@
+<style type="text/css">
 
+    .submit-btn {
+        margin: 10px 0;
+      background: white;
+      width: 120px;
+      color: black;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 3px;
+      border: 1px solid black;
+      outline: none;
+      padding: 8px;
+      transition: 0.3s;
+    }
+    .submit-btn:hover {
+        background-color: black;
+        color: white;
+    }
+    /* Button */
+    .btn-auth {
+      margin: 10px 0;
+      background: black;
+      width: 120px;
+      position: relative;
+      padding: 8px;
+      color: white;
+      cursor: pointer;
+      text-align: center;
+      transition: all 165ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+      border-radius: 3px;
+      font-weight: 100;
+      overflow: hidden;
+      text-decoration: none;
+        border: 1px solid black;
+        outline: none;
+    }
+
+    /* In Progress Button */
+    .btn-progress {
+      width: 200px;
+      color: black;
+    }
+
+    .btn-fill:after {
+      content: '';
+      background: white;
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      transform-origin: 0;
+      display: block;
+      animation: fill 0.6s linear forwards;
+    }
+
+    /* Button Complete */
+    .btn-complete {
+        width: 42px;
+        height: 42px;
+        color: white;
+        pointer-events: none;
+        border-radius: 50%;
+        border: 2px solid limegreen;
+    }
+
+    .btn-complete:after {
+        content: "\2713";
+        background-color: white;
+        color: limegreen;
+        height: 100%;
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    /* Animation */
+    @keyframes fill {
+      from {
+        width: 0%;
+      }
+      to {
+        width: 100%;
+      }
+    }
+</style>
+<%= render 'layouts/wildlife_head' %>
+
+<section id="indet" class="py-4 my-4">
+    <div class="container">
+        <div>
+            <h3 class="demi text-dark">Upload footages</h3>
+            <%= render 'upload' %>
+        </div>
+    
+        <button type="button" class='btn-auth light align-middle'>Authenticate</button>
+        <a href="#"><button type="submit" class="submit-btn light align-middle" disabled="true" id="uploader-submit">Submit</button></a>
+
+    </div>
+</section>
+
+<script type="text/javascript">
+        // DELIVERY PAGE
+        $(function() {
+            // Animation
+            var btn = $(".btn-auth");
+            btn.on("click", function() {
+                $(this).addClass('btn-progress');
+                setTimeout(function() {
+                    btn.addClass('btn-fill')
+                }, 150);
+                setTimeout(function() {
+                    btn.removeClass('btn-fill')
+                }, 750);
+                setTimeout(function() {
+                    btn.addClass('btn-complete')
+                }, 750);
+                
+                // Submit Button
+                setTimeout(function() {
+                    document.getElementById("uploader-submit").disabled = false;
+                }, 750);
+            });
+
+        })
+
+        jQuery(function($){
+            var $idval = $('#staff_name');
+            $('select[name="staff_picker"]').change(function(){
+                $idval.val($(this).val())
+            }).triggerHandler('change')
+        })
+</script>
 
 
 <!-- End Navbar -->
-<div class="margin">
+<!-- <div class="margin">
   <div class="content">
     <div class="container-fluid">
-      <h2> Intruder Detector </h2>
+      
       <div class="row">
         <div class="col-xl-12 col-lg-12 center">
-          <%= render 'upload'%>
+          <%#= render 'upload'%>
         </div>
       </div>
       <div class="row">
         <div class="col-xl-12 col-lg-12">
-          <%= render 'classification_form'%>
+          <%#= render 'classification_form'%>
         </div>
       </div>
     </div>
@@ -27,4 +162,4 @@ $("#example-basic").steps({
     transitionEffect: "slideLeft",
     autoFocus: true
 });
-</script>
+</script> -->

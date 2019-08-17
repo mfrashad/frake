@@ -72,5 +72,12 @@ nav li a {
 
 section {
     margin: 0;
+}
 
+.shadow-big {
+    text-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.shadow-small {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.12);
 }
