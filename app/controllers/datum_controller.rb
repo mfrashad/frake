@@ -11,10 +11,6 @@ class DatumController < ApplicationController
   end
 
   def index
-    csv_text = File.read('public/uploads/datum/cleaner.csv')
-    csv = CSV.parse(csv_text, :headers => true)
-    @headers = csv.headers
-    @rows = csv.take(10)
   end
 
   def select
